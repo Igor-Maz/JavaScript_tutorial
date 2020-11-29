@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p id="someText"></p>
+<!--<script src="home.js"></script>-->
+
+    <script>
+        let student = `[
+            {
+                "name": "Igo",
+                "age": 34,
+                "height": 180
+            },
+            {
+                "name": "Mar",
+                "age": 33,
+                "height": 160
+            },
+            {
+                "name": "Wolf",
+                "age": 9,
+                "height": 20
+            },
+            {
+                "name": "Nucia",
+                "age": 2,
+                "height": 15
+            }
+            ]`
+
+        console.log(JSON.parse(student)[0].age);
+    </script>
+
+
+</body>
+</html>
