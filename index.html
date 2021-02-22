@@ -35,12 +35,39 @@
     <div class='container-3'>
         <h2>Challenge 3: Rock, Paper, Scissors Game</h2>
         <div class='flex-box-rps' id='flex-box-rps-div'>
-            <img id='rock' src='https://www.sciencenewsforstudents.org/wp-content/uploads/2019/11/860_main_magnesite.png' alt='' width=150 height=150 onclick="rpsGame(this)">
-            <img id='paper' src='https://ecdn.teacherspayteachers.com/thumbitem/Writing-Paper-with-Star-Border-2758634-1533684299/original-2758634-1.jpg' alt='' width=150 height=150 onclick="rpsGame(this)">
-            <img id='scissors' src='https://www.fiskars.eu/var/fiskars_main/storage/images/content-blocks/campaigns/heavy-duty-scissors/powerarc-sakse-specifikationer/powerarc-scissors-key-features/6087456-1-eng-EU/powerarc-sakse-specifikationer.jpg' alt='' width=150 height=150 onclick="rpsGame(this)">           
+            <img id='rock'
+                src='https://www.sciencenewsforstudents.org/wp-content/uploads/2019/11/860_main_magnesite.png' alt=''
+                width=150 height=150 onclick="rpsGame(this)">
+            <img id='paper'
+                src='https://ecdn.teacherspayteachers.com/thumbitem/Writing-Paper-with-Star-Border-2758634-1533684299/original-2758634-1.jpg'
+                alt='' width=150 height=150 onclick="rpsGame(this)">
+            <img id='scissors'
+                src='https://www.fiskars.eu/var/fiskars_main/storage/images/content-blocks/campaigns/heavy-duty-scissors/powerarc-sakse-specifikationer/powerarc-scissors-key-features/6087456-1-eng-EU/powerarc-sakse-specifikationer.jpg'
+                alt='' width=150 height=150 onclick="rpsGame(this)">
         </div>
-
     </div>
+
+    <div class='container-4'>
+        <h2 id='change-my-color'>Challenge 4: Change the Color of All Buttons</h2>
+        <div class="flex-box-pick-color" id='buttons-to-be-changed'>
+            <form action=''>
+                <select name="backdrop" id='background' onchange="buttonColorChange(this)">
+                    <option value='random'>Random</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="default">Default</option>
+                    <option value="blank">Blank</option>
+                </select>
+            </form>
+
+            <button class="btn btn-primary">Wee!</button>
+            <button class="btn btn-danger">Yahoo!</button>
+            <button class="btn btn-warning">Google!</button>
+            <button class="btn btn-success">Facebook!</button>
+        </div>
+    </div>
+
 
 
     <script src="static/js/script.js"></script>
