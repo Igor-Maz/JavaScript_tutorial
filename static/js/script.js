@@ -104,18 +104,18 @@ function rpsFrontEnd(humanImageChoice, botImageChoice, finalMessage) {
 let all_buttons = document.getElementById('buttons-to-be-changed').getElementsByTagName('button');
 console.log(all_buttons);
 let copyAllButtons = [];
-for (let i=0; i < all_buttons.length; i++){
+for (let i = 0; i < all_buttons.length; i++) {
     copyAllButtons.push(all_buttons[i].classList[1]);
 }
 console.log(copyAllButtons);
 
 function buttonColorChange(buttonThingy) {
-    if (buttonThingy.value === 'red' ) {
-        buttonsRed();
+    if (buttonThingy.value === 'red') {
+        buttonsColor('danger');
     } else if (buttonThingy.value === 'green') {
-        buttonsGreen();
+        buttonsColor('success');
     } else if (buttonThingy.value === 'yellow') {
-        buttonsYellow();
+        buttonsColor('warning');
     } else if (buttonThingy.value === 'random') {
         buttonsRandom();
     } else if (buttonThingy.value === 'default') {
@@ -125,45 +125,34 @@ function buttonColorChange(buttonThingy) {
     }
 }
 
-function buttonsRed() {
-    for (let i=0; i < all_buttons.length; i++){
-        all_buttons[i].classList.remove(all_buttons[i].classList[1]);
-        all_buttons[i].classList.add('btn-danger');
-    }
-}
-
-function buttonsGreen() {
-    for (let i=0; i < all_buttons.length; i++){
-        all_buttons[i].classList.remove(all_buttons[i].classList[1]);
-        all_buttons[i].classList.add('btn-success');
-    }
-}
-
-function buttonsYellow() {
-    for (let i=0; i < all_buttons.length; i++){
-        all_buttons[i].classList.remove(all_buttons[i].classList[1]);
-        all_buttons[i].classList.add('btn-warning');
-    }
-}
-
-function buttonsBlank() {
-    for (let i=0; i < all_buttons.length; i++){
-        all_buttons[i].classList.remove(all_buttons[i].classList[1]);
-    }
-}
-
 function buttonsDefault() {
-    for (let i=0; i < all_buttons.length; i++){
+    for (let i = 0; i < all_buttons.length; i++) {
         all_buttons[i].classList.remove(all_buttons[i].classList[1]);
         all_buttons[i].classList.add(copyAllButtons[i]);
     }
 }
 
+function buttonsColor(color) {
+    for (let i = 0; i < all_buttons.length; i++) {
+        all_buttons[i].classList.remove(all_buttons[i].classList[1]);
+        all_buttons[i].classList.add(`btn-${color}`);
+    }
+}
+
 function buttonsRandom() {
     let choices = ['btn-primary', 'btn-danger', 'btn-warning', 'btn-success'];
-    for (let i=0; i < all_buttons.length; i++){
+    for (let i = 0; i < all_buttons.length; i++) {
         let randomNumber = Math.floor(Math.random() * 4)
         all_buttons[i].classList.remove(all_buttons[i].classList[1]);
         all_buttons[i].classList.add(choices[randomNumber]);
     }
 }
+
+function buttonsBlank() {
+    for (let i = 0; i < all_buttons.length; i++) {
+        all_buttons[i].classList.remove(all_buttons[i].classList[1]);
+    }
+}
+
+// Challenge 5: Blackjack
+
