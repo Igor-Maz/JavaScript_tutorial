@@ -231,6 +231,8 @@ function blackjackDeal() {
         document.querySelector('#blackjack-result').style.color = "black";
 
         blackjackGame['turnsOver'] = false;
+        document.querySelector('#blackjack-stand-button').disabled = false;
+        document.querySelector('#blackjack-hit-button').disabled = false;
     }
 }
 
@@ -261,6 +263,8 @@ function sleep(ms) {
 
 async function dealerLogic() {
     blackjackGame['isStand'] = true;
+    document.querySelector('#blackjack-stand-button').disabled = true;
+    document.querySelector('#blackjack-hit-button').disabled = true;
 
     while (DEALER['score'] < 16 && blackjackGame['isStand'] === true) {
         let card = randomCard();
